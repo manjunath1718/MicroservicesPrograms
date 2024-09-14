@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: MS_AdminServerApp
+
+server:
+  port: 1414

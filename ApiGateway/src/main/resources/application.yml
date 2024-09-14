@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: cricbuzz-api1
+          uri: lb://MS-CRICBUZZAPP1
+          predicates: 
+            - Path=/todayMatches
+        - id: cricbuzz-api2
+          uri: lb://MS-CRICBUZZAPP2
+          predicates:
+            - Path=/winProbability
+        
+  application:
+    name: ApiGateway
+    
+server:
+  port: 4444

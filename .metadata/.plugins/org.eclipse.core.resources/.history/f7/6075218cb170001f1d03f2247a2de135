@@ -1,0 +1,9 @@
+package com.telusko.rest;
+
+@FeignClient(name = "MS_CRICBUZZAPP1")
+public interface CricBuzzFeignClient {
+
+	@GetMapping("/todayMatches")
+	public String todayMatches();
+	
+}

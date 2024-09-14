@@ -1,0 +1,8 @@
+package com.telusko.model;
+
+public class Country {
+
+	Integer no;
+	String name;
+	String countryCode;
+}

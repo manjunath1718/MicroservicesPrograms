@@ -1,0 +1,23 @@
+package com.telusko.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.telusko.model.Country;
+import com.telusko.service.CountryService;
+
+@RestController
+public class CountryController {
+
+	@Autowired
+	CountryService service;
+	
+	@GetMapping("/add")
+	public Country registerCountry(RequestBody Country country){
+		
+		service.addCountry(country);
+	}
+	
+}

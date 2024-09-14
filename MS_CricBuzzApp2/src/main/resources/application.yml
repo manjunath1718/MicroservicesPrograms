@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: MS-CricBuzzApp2
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:1414/
+      
+      
+    
+server:
+  port: 8485
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
