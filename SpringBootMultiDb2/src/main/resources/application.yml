@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: SpringBootMultiDb2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console 
+  datasource:
+    product:
+      url: jdbc:mysql://localhost:3306/productdb
+      username: root
+      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    customer:
+      url: jdbc:h2:mem:customerdb
+      driver-class-name: org.h2.Driver
+      username: john
+      password: john123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect

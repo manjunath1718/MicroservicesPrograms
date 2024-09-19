@@ -1,0 +1,27 @@
+resilience4j.circuitbreaker:
+  instances:
+    VenueCB:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+
+#resilience4j.circuitbreaker:
+#  configs:
+#    default:
+#      registerHealthIndicator: true
+#      slidingWindowSize: 100
+#      minimumNumberOfCalls: 10
+#      permittedNumberOfCallsInHalfOpenState: 3
+#      waitDurationInOpenState: 10s
+#      failureRateThreshold: 50
+#  instances:
+#    venueService:
+#      baseConfig: default
+#
+#spring:
+#  application:
+#    name: CircuitBreaker1
+#
+server:
+  port: 8844
